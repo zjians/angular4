@@ -1,3 +1,10 @@
-<p>
+<div>
   home works!
-</p>
+  <a [routerLink]="[ 'homepage1' ]" routerLinkActive="active">homepage1</a>
+  <p routerLinkActive="active">
+    <a [routerLink]="[ 'homepage2' ]">homepage2</a>
+  </p>
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>

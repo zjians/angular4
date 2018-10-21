@@ -35,4 +35,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
         }
     }`
 ## 2.分模块， 异步路由（模块的懒加载）
-  
+  angular中的异步路由是模块级别的。
