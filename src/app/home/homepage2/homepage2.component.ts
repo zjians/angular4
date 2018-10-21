@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-homepage2',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Homepage2Component implements OnInit {
 
-  constructor() { }
+  constructor(
+    public router: Router,
+    public activeRoute: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+    this.activeRoute.params.subscribe((params) => {
+      console.log('$$$$$');
+      console.log(params);
+    });
+  }
+  public manualNav(): void {
+    // this.router.navigateByUrl("/jokes");
+    // navigate方法不支持矩阵式参数
+    // this.router.navigate(['/home'], { queryParams: { page: 1, name: 222 } });
   }
 
 }
