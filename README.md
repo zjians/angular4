@@ -25,3 +25,13 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## 1.配置less
+  新项目使用  ng new [appname] --style less
+  已有的项目  修改 *.css 文件及引用处后缀名为 less并在 angular.json 文件中设置schematics为
+  `"schematics": {
+        "@schematics/angular:component": {
+          "styleext": "less"
+        }
+    }`
+  
