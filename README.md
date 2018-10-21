@@ -36,3 +36,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     }`
 ## 2.分模块， 异步路由（模块的懒加载）
   angular中的异步路由是模块级别的。
+## 3.共享模块
+ng中一个组件只能属于一个模块，如果有一些公用的组件，虽然在app.module中全局注册可以，但是如果公用组件太多会导致app.module打包出来体积太大，所以我们可以使用共享组件。定义一个module，声明并抛出所有公用组件，然后当一个组件中想用共享组件的时候，直接在当前组件所属的module中import共享module就可以。
